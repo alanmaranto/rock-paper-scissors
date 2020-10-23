@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: radial-gradient(
+    circle at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  min-height: 100vh;
+}
