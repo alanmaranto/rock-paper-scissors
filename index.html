@@ -14,7 +14,6 @@
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,19 +28,61 @@
           <p id="score">0</p>
         </div>
       </header>
-      <main>
-        <button class="btn-circle">
-          <img src="/images/icon-paper.svg" alt="paper-icon" />
+      <main id="main">
+        <button class="btn-circle btn-paper pick" data-choice="paper">
+          <div class="wrapper">
+            <img src="/images/icon-paper.svg" alt="paper-icon" />
+          </div>
         </button>
-        <button class="btn-circle">
-          <img src="/images/icon-scissors.svg" alt="scissors-icon" />
+        <button class="btn-circle btn-scissors pick" data-choice="scissors">
+          <div class="wrapper">
+            <img src="/images/icon-scissors.svg" alt="scissors-icon" />
+          </div>
         </button>
-        <button class="btn-circle">
-          <img src="images/icon-rock.svg" alt="rock-icon" />
+        <button class="btn-circle btn-rock pick" data-choice="rock">
+          <div class="wrapper">
+            <img src="images/icon-rock.svg" alt="rock-icon" />
+          </div>
         </button>
       </main>
 
-      <button class="btn-rules">Rules</button>
+      <div class="rules-modal" id="modal">
+        <img src="./images/image-rules.svg" alt="rules" />
+        <button id="close"><img src="./images/icon-close.svg" alt="close" /></button>
+      </div>
+      <button class="btn-rules" id="open">Rules</button>
     </div>
+
+    <div id="selection" class="selection">
+      <div>
+        <h2>You picked</h2>
+        <button
+          class="btn-circle btn-paper"
+          data-choice="paper"
+          id="user-select"
+        >
+          <div class="wrapper">
+            <img src="/images/icon-paper.svg" alt="paper-icon" />
+          </div>
+        </button>
+      </div>
+      <div class="responsive-one-column">
+        <p class="big-text">
+          You
+          <span id="winner">Win</span>
+        </p>
+        <button id="reset" class="btn">Play again</button>
+      </div>
+      <div>
+        <h2>The house picked</h2>
+        <button class="btn-circle btn-rock" data-choice="rock" id="cpu-choice">
+          <div class="wrapper">
+            <img src="images/icon-rock.svg" alt="rock-icon" />
+          </div>
+        </button>
+      </div>
+      <div></div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
